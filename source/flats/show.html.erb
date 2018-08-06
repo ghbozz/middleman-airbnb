@@ -1,0 +1,59 @@
+<% flat = data.flats[owner] %>
+
+<!-- Inject flat data in template -->
+
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/<%= flat.city_slug %>');">
+</div>
+
+<div class="container">
+  <div class="show-container">
+    <div class="owner">
+      <div class="photo">
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class: "img-circle", :width => 150 %>
+      </div>
+
+      <div class="flat-infos">
+        <p><%= flat.name %></p>
+        <h3><%= flat.description %></h3>
+        <p><%= flat.city_name %></p>
+      </div>
+    </div>
+
+    <form>
+      <div class="form-content form-inline">
+        <div class="form-group">
+          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="First name">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Last name">
+        </div>
+      </div>
+
+      <select class="form-control">
+        <option>Default select</option>
+      </select>
+
+      <button class="btn btn-danger">Book Now</button>
+    </form>
+
+  </div>
+
+  <div class="details-wrapper">
+    <div class="desc">
+      <h4><strong>About this flat</strong></h4>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, explicabo provident aspernatur quis</p>
+    </div>
+
+    <div class="the-space">
+      <p>The Space</p>
+      <ul class="list-unstyled">
+        <li>accomodate: <strong><%= flat.accomodates %></strong> </li>
+        <li>bedrooms: <strong><%= flat.bedrooms %></strong></li>
+        <li>bed type: <strong><%= flat.bed_type %></strong></li>
+        <li>bathrooms: <strong><%= flat.bathrooms %></strong></li>
+        <li>property type: <strong><%= flat.property_type %></strong></li>
+        <li>rating: <strong><%= flat.rating %></strong></li>
+      </ul>
+    </div>
+  </div>
+</div>
